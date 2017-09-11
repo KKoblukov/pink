@@ -64,7 +64,8 @@ gulp.task("serve", function() {
   });
 
   gulp.watch("less/**/*.less", ["style"]);
-  gulp.watch("*.html", ["copyhtml"])
+  gulp.watch("*.html", ["copyhtml"]);
+  gulp.watch("build/*.html")
       .on("change", server.reload);
 });
 
