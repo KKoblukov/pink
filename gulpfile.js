@@ -5,7 +5,7 @@ var less = require("gulp-less");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
-var server = require("browser-sync");
+var server = require("browser-sync").create();
 var mqpacker = require("css-mqpacker");
 var minify = require("gulp-csso");
 var rename = require("gulp-rename");
@@ -36,7 +36,7 @@ gulp.task("style", function() {
       .pipe(minify())
       .pipe(rename("style.min.css"))
       .pipe(gulp.dest("build/css"))
-      .pipe(server.reload({stream: true}));
+      .pipe(server.stream());
 });
 
 gulp.task("images", function() {
@@ -58,22 +58,27 @@ gulp.task("symbols", function() {
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("serve", function() {
+gulp.task("serve", ["style"], function() {
   server.init({
-    server: "build"
+    server: "build",
+    notify: false,
+    cors: true,
+    open: true,
+    ui: false
   });
 
-  gulp.watch("less/**/*.less", ["style"]);
-  gulp.watch("*.html", ["copyhtml"]);
-  gulp.watch("build/*.html")
-      .on("change", server.reload);
+  gulp.watch("less/**/*.less", ["style:update"]);
+  gulp.watch("*.html", ["html:update"]);
+  gulp.watch("js/*.js", ["js:update"]);
+  //gulp.watch("build/*.html")
+  //    .on("change", server.reload);
 });
 
 gulp.task("copy", function() {
   return gulp.src([
     "fonts/**/*.{woff,woff2}",
     "img/**",
-    "js/**",
+    "js/*.js",
     "*.html"
   ], {
     base: "."
@@ -81,17 +86,33 @@ gulp.task("copy", function() {
   .pipe(gulp.dest("build"));
 });
 
-gulp.task("copyhtml", function() {
-  return gulp.src([
-    "*.html"
-  ], {
-    base: "."
-  })
+gulp.task("html:copy", function() {
+  return gulp.src("*.html")
   .pipe(gulp.dest("build"));
+});
+
+gulp.task("html:update", ["html:copy"], function(done) {
+  server.reload();
+  done();
+});
+
+gulp.task("style:update", ["style"], function(done) {
+  server.reload();
+  done();
+});
+
+gulp.task("js:copy", function() {
+  return gulp.src("js/*.js")
+  .pipe(gulp.dest("build/js"));
+});
+
+gulp.task("js:update", ["js:copy"], function(done) {
+  server.reload();
+  done();
 });
 
 gulp.task("clean", function() {
-  return del("build");
+  return del("build/**/*.*");
 });
 
 gulp.task("build", function(fn) {
