@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Pink</title>
 </head>
+
 <body>
   <header class="page-header">
     <div class="page-header__wrapper">
@@ -17,7 +19,7 @@
         <picture>
           <source media="(min-width:1200px)" srcset="img/logo-pink-white-desktop.svg">
           <source media="(min-width:700px)" srcset="img/logo-pink-white-tablet.svg">
-          <img src="img/logo-pink-white-mobile.svg"alt="Pink">
+          <img src="img/logo-pink-white-mobile.svg" alt="Pink">
         </picture>
       </div>
 
@@ -46,6 +48,203 @@
       </section>
     </div>
   </header>
+  <main>
+    <section class="adventages">
+      <div class="adventages__wrapper">
+        <div class="adventages__title">
+          <p>Устали от серости мегаполиса?</p>
+          <p>Нам есть, что вам<br> предложить!</p>
+        </div>
+        <ul class="adventages__list">
+          <li class="adventages__item">
+            <h3 class="adventages__item-title">Поднимает настроение</h3>
+            <p class="adventages__item-description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            <div class="adventages__image-wrapper">
+              <picture>
+                <source media="(min-width:1200px)" srcset="img/iphone-screen-1-desktop@1x.png">
+                <source media="(min-width:700px)" srcset="img/iphone-screen-1-tablet@1x.png">
+                <img src="img/iphone-screen-mobile@1x.png" alt="" class="adventages__item-image">
+              </picture>
+            </div>
+          </li>
+          <li class="adventages__item">
+            <h3 class="adventages__item-title">Меняет мир вокруг</h3>
+            <p class="adventages__item-description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            <div class="adventages__image-wrapper">
+              <picture>
+                <source media="(min-width:1200px)" srcset="img/iphone-screen-2-desktop@1x.png">
+                <source media="(min-width:700px)" srcset="img/iphone-screen-2-tablet@1x.png">
+                <img src="img/iphone-screen-2-mobile@1x.png" alt="" class="adventages__item-image">
+              </picture>
+            </div>
+          </li>
+          <li class="adventages__item">
+            <h3 class="adventages__item-title">Заводит новых друзей</h3>
+            <p class="adventages__item-description">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+            <div class="adventages__image-wrapper">
+              <picture>
+                <source media="(min-width:1200px)" srcset="img/iphone-screen-3-desktop@1x.png">
+                <source media="(min-width:700px)" srcset="img/iphone-screen-3-tablet@1x.png">
+                <img src="img/iphone-screen-mobile@1x.png" alt="" class="adventages__item-image">
+              </picture>
+
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="effect">
+      <div class="effect__wrapper">
+        <img src="img/icon-timer.svg" alt="" class="effect__image">
+        <h2 class="effect__title">Эффект<br> на 24 часа!</h2>
+        <p class="effect__description">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+        </p>
+        <a href="#" class="effect__more">Узнать больше об исследовании</a>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <ul class="reviews__list slider">
+        <li class="reviews__item slider__item">
+          <h3 class="reviews__author">Николай Петров</h3>
+          <p class="reviews__author-age">25 лет, водитель трамвая</p>
+          <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        </li>
+        <li class="reviews__item slider__item">
+          <h3 class="reviews__author"></h3>
+          <p class="reviews__author-age"></p>
+          <p class="reviews__text"></p>
+        </li>
+        <li class="reviews__item slider__item">
+          <h3 class="reviews__author"></h3>
+          <p class="reviews__author-age"></p>
+          <p class="reviews__text"></p>
+        </li>
+      </ul>
+      <ul class="reviews__pagination slider__pagination">
+        <li class="slider__pagination-item slider__pagination-item--active"></li>
+        <li class="slider__pagination-item"></li>
+        <li class="slider__pagination-item"></li>
+      </ul>
+      <button class="reviews__prev" type="button"><-</button>
+      <button class="reviews__next" type="button">-></button>
+    </section>
+
+    <section class="price">
+      <div class="price__table-wrapper">
+        <table class="price-table">
+          <tr>
+            <th class="price-table__header--transparent">
+
+            </th>
+            <th class="price-table__header">
+              <b class="price-table__column-name">База</b>
+              <span class="price-table__price">1,99 USD</span>
+            </th>
+            <th class="price-table__header price-table__hit">
+              <b class="price-table__column-name">Стандарт</b>
+              <span class="price-table__price">3,99 USD</span>
+            </th>
+            <th class="price-table__header">
+              <b class="price-table__column-name">Анлим</b>
+              <span class="price-table__price">9,99 USD</span>
+            </th>
+          </tr>
+          <tr>
+            <td class="price-table__row-name">Розовый фильтр</td>
+            <td class="price-table__yes">Розовый фильтр</td>
+            <td class="price-table__yes">Розовый фильтр</td>
+            <td class="price-table__yes">Розовый фильтр</td>
+          </tr>
+          <tr>
+            <td class="price-table__row-name">Смайлики</td>
+            <td class="price-table__no">Смайлики</td>
+            <td class="price-table__yes">Смайлики</td>
+            <td class="price-table__yes">Смайлики</td>
+          </tr>
+          <tr>
+            <td class="price-table__row-name">Комментарии</td>
+            <td class="price-table__no">Комментарии</td>
+            <td class="price-table__no">Комментарии</td>
+            <td class="price-table__yes">Комментарии</td>
+          </tr>
+        </table>
+        <ul class="price__pagination slider__pagination">
+          <li class="slider__pagination-item"></li>
+          <li class="slider__pagination-item slider__pagination-item--active"></li>
+          <li class="slider__pagination-item"></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contacts">
+      <h2 class="contacts__header">Остались вопросы?<br>Свяжитесь с нами!</h2>
+      <ul class="contacts__list">
+        <li class="contacts__item contacts__item--phone">
+          <h3 class="contacts__title">Звоните:</h3>
+          <a href="tel: +78125556666" class="contacts__text">+7 (812) 555-66-66</a>
+        </li>
+        <li class="contacts__item contacts__item--mail">
+          <h3 class="contacts__title">Пишите:</h3>
+          <a href="form.html" class="contacts__text">mail@htmlacademy.ru</a>
+        </li>
+        <li class="contacts__item contacts__item--adress">
+          <h3 class="contacts__title">Приезжайте в гости:</h3>
+          <a href="" class="contacts__text">ул. Большая<br> Конюшенная, 19/8</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <section class="map">
+      <iframe class="map__google" width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJKadbyg8xlkYRn4c8SdRTnOo&key=AIzaSyAeceTCqMydy2vRiqDHzsqVVlJ8PFeUFUw" allowfullscreen></iframe>
+    </section>
+
+    <section class="page-footer__bottom-line">
+      <div class="page-footer__logo">
+        <a href="#" class="page-footer__link">
+          <picture>
+            <source media="(min-width:1200px)" srcset="img/logo-pink-blue-desktop.svg">
+            <source media="(min-width:700px)" srcset="img/logo-pink-blue-mobile.svg">
+            <img src="img/logo-pink-blue-mobile.svg" alt="Pink">
+          </picture>
+        </a>
+      </div>
+
+      <div class="social">
+        <h2 class="visually-hidden">Подписывайтесь на нас в социальных сетях!</h2>
+        <ul class="social__list">
+          <li class="social__item social__item--tw"><a href="#">Twitter
+            <svg width="18" height="14">
+              <use xlink:href="img/symbols.svg#icon-twitter"></use>
+            </svg>
+          </a></li>
+          <li class="social__item social__item--fb"><a href="#">Facebook
+            <svg width="9" height="18">
+              <use xlink:href="img/symbols.svg#icon-facebook"></use>
+            </svg>
+          </a></li>
+          <li class="social__item social__item--youtube"><a href="#">Вконтакте
+            <svg width="15" height="13">
+              <use xlink:href="img/symbols.svg#icon-youtube"></use>
+            </svg>
+          </a></li>
+        </ul>
+      </div>
+
+      <div class="developer">
+          <p class="developer__text">Разработано</p>
+          <a href="#" class="developer__link">
+          <svg width="32" height="32">
+            <use xlink:href="img/symbols.svg#logo-htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
+
+    </section>
+  </footer>
   <script src="js/main.js"></script>
 </body>
+
 </html>

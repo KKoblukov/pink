@@ -59,7 +59,7 @@
     content: '';
     position: absolute;
     top: 30px;
-    right: -3px;
+    right: 23px;
 
     width: 30px;
     height: 4px;
@@ -80,6 +80,14 @@
   &:active::before {
     background-color: rgba(255, 255, 255, 0.3);
   }
+}
+
+.main-nav--opened {
+  width: auto;
+
+  position: absolute;
+  right: -20px;
+  left: -20px;
 }
 
 .main-nav__list {
@@ -141,6 +149,13 @@
   }
 
   .main-nav--opened .main-nav__wrapper {
+    right: -40px;
+    left: -40px;
+  }
+}
+
+@media @tablet-widths {
+  .main-nav--opened {
     right: -40px;
     left: -40px;
   }

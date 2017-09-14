@@ -1,0 +1,32 @@
+.developer {
+  display: flex;
+  align-items: center;
+}
+
+.developer__text {
+  margin-right: 15px;
+
+  font-size: 14px;
+  line-height: 18px;
+  color: @darkblue;
+  font-weight: normal;
+}
+
+.developer svg {
+  fill: @accent;
+
+  &:hover {
+    fill: @darkblue;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media @desktop-widths {
+  .developer__text {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}

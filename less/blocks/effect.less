@@ -1,0 +1,60 @@
+.effect {
+  .container();
+  padding-top: 58px;
+  display: none;
+}
+
+.effect__wrapper {
+  padding-left: 310px;
+  padding-bottom: 120px;
+
+  position: relative;
+
+}
+
+.effect__image {
+  width: 240px;
+  height: 277px;
+
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.effect__title {
+  margin: 0;
+  padding-top: 42px;
+
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: bold;
+}
+
+.effect__description {
+  margin: 0;
+  margin-top: 17px;
+  margin-bottom: 17px;
+
+  font-size: 14px;
+  line-height: 24px;
+  color: @darkblue;
+}
+
+.effect__more {
+  display: block;
+
+  color: @accent;
+}
+
+@media @tablet-widths {
+  .effect {
+    display: block;
+  }
+}
+
+@media @desktop-widths {
+  .effect {
+    background-color: @bg-lightgrey;
+  }
+}

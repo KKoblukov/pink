@@ -36,7 +36,7 @@ gulp.task("style", function() {
       .pipe(minify())
       .pipe(rename("style.min.css"))
       .pipe(gulp.dest("build/css"))
-      .pipe(server.stream());
+      .pipe(server.stream({once:true}));
 });
 
 gulp.task("images", function() {
@@ -58,16 +58,17 @@ gulp.task("symbols", function() {
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("serve", ["style"], function() {
+gulp.task("serve", ["build"], function() {
   server.init({
     server: "build",
     notify: false,
     cors: true,
     open: true,
-    ui: false
+    ui: false,
+    port: 8080
   });
 
-  gulp.watch("less/**/*.less", ["style:update"]);
+  gulp.watch("less/**/*.less", ["style"]);
   gulp.watch("*.html", ["html:update"]);
   gulp.watch("js/*.js", ["js:update"]);
   //gulp.watch("build/*.html")

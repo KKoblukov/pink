@@ -1,0 +1,41 @@
+.page-footer {
+  .container();
+}
+
+.page-footer__bottom-line {
+  padding-top: 36px;
+  padding-bottom: 51px;
+
+  display: none;
+}
+
+.page-footer__logo img {
+  width: 78px;
+  height: 22px;
+
+  display: block;
+}
+
+.page-footer__logo {
+  &:hover {
+    fill: @accent;
+  }
+}
+
+@media @tablet-widths {
+  .page-footer__bottom-line {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .page-footer__logo img {
+    width: 146px;
+    height: 40px;
+  }
+
+
+}
+
+@media @tablet-widths {
+
+}
