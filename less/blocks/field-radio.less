@@ -1,0 +1,93 @@
+@line-height: 1.375em;
+
+.field-radio {
+
+  display: block;
+  margin-bottom: (@line-height / 2);
+
+  &__title {
+    margin-bottom: 0.4em;
+    
+    display: block;
+    font-weight: 700;
+    line-height: @line-height;
+  }
+
+  &__input-wrap {
+    margin-top: 50px;
+  }
+
+  &__name {
+    position: relative;
+    display: inline-block;
+    padding-left: 70px;
+    padding-right: 0.6em;
+    font-weight: 400;
+    line-height: @line-height;
+  }
+
+  &__name-text {
+    font-size: 18px;
+    line-height: 30px;
+    color: @darkblue;
+
+    //свой чекбокс
+    &:before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: 0;
+      width: 39px;
+      height: 39px;
+      
+      border: 2px solid #e5e5e5;
+      border-radius: 50%;
+
+      background-color: #fff;
+      }
+  }
+
+  &__input {
+    position: absolute;
+    top: 0.8em;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    transform: translateY(-50%);
+
+    &:focus,
+    &:active {
+      .field-focus();
+    }
+
+    //Если используем свой чекбокс, то скрываем инпут
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+
+  &__help-text-wrap {
+    padding-left: 1.5em;
+    display: none;
+  }
+
+  &__help-text {
+    .field-help-text();
+  }
+}
+
+input:checked ~ .field-radio__name-text::after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 12px;
+  width: 15px;
+  height: 15px;
+  
+  border-radius: 50%;
+
+  background-color: @accent;
+}

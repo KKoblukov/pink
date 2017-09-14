@@ -1,0 +1,43 @@
+@text-color--muted: hsl(0, 0%, 50%);
+@font-size--small: 0.75em;
+@line-height: 1.375em;
+
+.field-actions {
+  display: block;
+  margin-top: 47px;
+  margin-bottom: 57px;
+
+  .btn {
+    margin-bottom: (@line-height / 2);
+
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 30px;
+    padding-top: 16px;
+    padding-bottom: 17px;
+    padding-right: 48px;
+    padding-left: 48px;
+    text-align: center;
+    white-space: nowrap;
+
+    background-color: #2aab6d;
+    border-radius: 5px;
+  }
+
+  &__text {
+    display: block;
+    margin-top: (@line-height / 2);
+    margin-bottom: (@line-height / 2);
+
+    font-size: 14px;
+    line-height: 30px;
+    color: @darkblue;
+    text-transform: uppercase;
+    text-align: center;
+
+    span {
+      color: @accent;
+    }
+    
+  }
+}

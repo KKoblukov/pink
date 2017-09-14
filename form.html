@@ -27,7 +27,7 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--active"><a href="#">Главная</a></li>
-            <li class="main-nav__item"><a href="#">Фотографии</a></li>
+            <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
             <li class="main-nav__item"><a href="#">Конкурс</a></li>
             <li class="main-nav__item"><a href="#">HTML Academy</a></li>
           </ul>
@@ -39,21 +39,155 @@
   </header>
   <main>
     <section class="form-review">
-      <h2 class="form__description">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</h2>
+      <h2 class="form__description">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту! <span>Пожалуйста, заполните форму ниже:</span></h2>
+
+
       <form class="form" action="index.html" method="post">
-        <label class="field-text">
-          <span class="field-text__name">Фамилия</span>
-          <span class="field-text__input-wrap">
-            <input class="field-text__input" type="text">
-            <span class="field-text__help-text">Помощь</span>
-          </span>
-        </label>
+
+          <fieldset class="form__name">
+            <label class="field-text">
+              <span class="field-text__name">Фамилия:</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="text" placeholder="Укажите фамилию">
+                <span class="field-text__help-text">Помощь</span>
+              </span>
+            </label>
+            <label class="field-text">
+              <span class="field-text__name">Имя:</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="text" placeholder="Введите ваше имя">
+                <span class="field-text__help-text">Помощь</span>
+              </span>
+            </label>
+            <label class="field-text">
+              <span class="field-text__name">Отчество:</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="text" placeholder="Ну и отчество тоже">
+                <span class="field-text__help-text">Помощь</span>
+              </span>
+            </label>
+          </fieldset>
+
+          <fieldset class="form__checkbox">
+            <legend>Ваши безбашенные достижения в путешествии</legend>
+
+            <div class="form__checkbox--wrapper">
+              <div class="field-checkbox__input-wrap">
+                <label class="field-checkbox__name">
+                  <input type="checkbox" class="field-checkbox__input" checked>
+                  <span class="field-checkbox__name-text">Сделал селфи с акулой</span>
+              </label>
+              </div>
+              <div class="field-checkbox__input-wrap">
+                <label class="field-checkbox__name">
+                  <input type="checkbox" class="field-checkbox__input" checked>
+                  <span class="field-checkbox__name-text">Обгорел на пляже</span>
+                </label>
+              </div>
+              <div class="field-checkbox__input-wrap">
+                <label class="field-checkbox__name">
+                  <input type="checkbox" class="field-checkbox__input">
+                  <span class="field-checkbox__name-text">Видел Чака  Норриса</span>
+                </label>
+              </div>
+              <div class="field-checkbox__input-wrap">
+                <label class="field-checkbox__name">
+                  <input type="checkbox" class="field-checkbox__input">
+                  <span class="field-checkbox__name-text">Накупил сувениров</span>
+                </label>
+              </div>
+              <div class="field-checkbox__input-wrap">
+                <label class="field-checkbox__name">
+                  <input type="checkbox" class="field-checkbox__input" checked>
+                  <span class="field-checkbox__name-text">Удержил башню</span>
+                </label>
+              </div>
+              <div class="field-checkbox__input-wrap">
+                <label class="field-checkbox__name">
+                  <input type="checkbox" class="field-checkbox__input">
+                  <span class="field-checkbox__name-text">Разгромил отель</span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+
+          <fieldset class="form__contacts">
+            <legend>Контактная информация</legend>
+            <div class="form__contacts--wrap">
+              <label class="field-text">
+                <span class="field-text__name">Номер<span>ок</span> телефон<span>чик</span>а</span>
+                <span class="field-text__input-wrap field-text__input-wrap--phone">
+                  <input class="field-text__input" type="tel" placeholder="Номер, пожалуйста">
+                  <span class="field-text__help-text">Помощь</span>
+                </span>
+              </label>
+
+              <label class="field-text">
+                  <span class="field-text__name">Адрес<span>ок</span> почты</span>
+                  <span class="field-text__input-wrap field-text__input-wrap--email">
+                    <input class="field-text__input" type="email" placeholder="E-mail, пожалуйста">
+                    <span class="field-text__help-text">Помощь</span>
+                  </span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="form__radio">
+            <!-- <div class="field-radio"> -->
+            <legend>С каким приложением путешествовали?</legend>
+            <div class="field-radio__input-wrap">
+              <label class="field-radio__name">
+                  <input type="radio" class="field-radio__input" name="radio-app" checked>
+                  <span class="field-radio__name-text">Pink для iOS</span>
+                </label>
+              <div class="field-radio__help-text-wrap">
+                <div class="field-radio__help-text">Пояснение</div>
+              </div>
+            </div>
+            <div class="field-radio__input-wrap">
+              <label class="field-radio__name">
+                    <input type="radio" class="field-radio__input" name="radio-app">
+                    <span class="field-radio__name-text">Pink для Android</span>
+                  </label>
+              <div class="field-radio__help-text-wrap">
+                <div class="field-radio__help-text">Пояснение</div>
+              </div>
+            </div>
+            <div class="field-radio__input-wrap">
+              <label class="field-radio__name">
+                    <input type="radio" class="field-radio__input" name="radio-app">
+                    <span class="field-radio__name-text">Windows Phone</span>
+                  </label>
+              <div class="field-radio__help-text-wrap">
+                <div class="field-radio__help-text">Пояснение</div>
+              </div>
+            </div>
+            <!-- </div> -->
+          </fieldset>
+
+          <fieldset class="form__review">
+            <legend>Опишите свои эмоции</legend>
+            <label class="field-text">
+              <span class="field-text__input-wrap">
+                <textarea class="field-text__input" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+                <span class="field-text__help-text">...</span>
+              </span>
+            </label>
+          </fieldset>
+
+          <div class="field-actions">
+            <button class="btn btn--form" type="submit">Отправить форму</button>
+            <div class="field-actions__text"><span>*</span> — обязательные поля</div>
+          </div>
       </form>
+
     </section>
   </main>
-  <footer class="page-footer">
+  <footer class="page-footer page-footer--inner-page">
     <section class="map">
-      <iframe class="map__google" width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJKadbyg8xlkYRn4c8SdRTnOo&key=AIzaSyAeceTCqMydy2vRiqDHzsqVVlJ8PFeUFUw" allowfullscreen></iframe>
+      <iframe class="map__google" width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJKadbyg8xlkYRn4c8SdRTnOo&key=AIzaSyAeceTCqMydy2vRiqDHzsqVVlJ8PFeUFUw"
+        allowfullscreen></iframe>
     </section>
 
     <section class="page-footer__bottom-line">
@@ -89,8 +223,8 @@
       </div>
 
       <div class="developer">
-          <p class="developer__text">Разработано</p>
-          <a href="#" class="developer__link">
+        <p class="developer__text">Разработано</p>
+        <a href="#" class="developer__link">
           <svg width="32" height="32">
             <use xlink:href="img/symbols.svg#logo-htmlacademy"></use>
           </svg>

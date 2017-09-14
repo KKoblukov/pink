@@ -1,0 +1,22 @@
+.field-help-text() {
+  @text-color--muted: hsl(0, 0%, 50%);
+  @font-size-small: 0.75em;
+
+  display: block;
+  padding-top: 0.4em;
+  font-size: @font-size-small;
+  line-height: 1.2em;
+  color: @text-color--muted;
+
+  &:empty {
+    display: none;
+  }
+}
+
+.field-focus() {
+  @color-main: rgb(2, 116, 217);
+  @opacity: 0.7;
+
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba(2, 116, 217, @opacity);
+}

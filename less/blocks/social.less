@@ -1,9 +1,11 @@
 .social__list {
   margin: 0;
   padding: 0;
+  margin-bottom: 40px;
 
   display: flex;
   align-items: center;
+  justify-content: center;
 
   list-style: none;
 }
@@ -50,4 +52,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media @tablet-widths {
+  .social__list {
+    margin-bottom: 0;
+  }
 }
