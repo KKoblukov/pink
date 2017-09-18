@@ -43,10 +43,16 @@
               0 18px 0 -1px #565c63;
 }
 
+.main-nav--closed .main-nav__toggle:hover::before {
+  background-color: rgb(210, 40, 86);
+  box-shadow: 0 10px 0 0 rgb(210, 40, 86),
+              0 20px 0 0 rgb(210, 40, 86);
+}
+
 .main-nav--closed .main-nav__toggle:active::before {
-  background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 10px 0 0 rgba(255, 255, 255, 0.3),
-              0 20px 0 0 rgba(255, 255, 255, 0.3);
+  background-color: rgba(210, 40, 86, 0.3);
+  box-shadow: 0 10px 0 0 rgba(210, 40, 86, 0.3),
+              0 20px 0 0 rgba(210, 40, 86, 0.3);
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -76,9 +82,14 @@
     transform: rotate(-45deg);
   }
 
+  &:hover::after,
+  &:hover::before {
+    background-color: rgb(210, 40, 86);
+  }
+
   &:active::after,
   &:active::before {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(210, 40, 86, 0.3);
   }
 }
 
@@ -113,6 +124,14 @@
 
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   border-bottom: 1px solid #000;
+
+  &[href]:hover {
+    color: @accent;
+  }
+
+  &[href]:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
 }
 
 @media @tablet-widths-only {
@@ -179,9 +198,61 @@
 
     text-transform: none;
     font-weight: normal;
+
+    position: relative;
+
+    &[href]:hover::after {
+      height: 2px;
+
+      content: '';
+      position: absolute;
+      left: 21px;
+      right: 21px;
+      bottom: 10px;
+
+      background-color: #fff;
+    }
+
+    &[href]:hover {
+      color: #fff;
+    }
+  
+    &[href]:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &[href]:active::after {
+      display: none;
+    }
   }
 
   .main-nav__item:first-of-type {
     margin-left: 320px;
+  }
+
+  .main-nav__item--active a {
+    &:hover::after {
+      height: 2px;
+
+      content: '';
+      position: absolute;
+      left: 21px;
+      right: 21px;
+      bottom: 10px;
+
+      background-color: @accent;
+    }
+
+    &:hover {
+      color: @accent;
+    }
+  
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &:active::after {
+      display: none;
+    }
   }
 }

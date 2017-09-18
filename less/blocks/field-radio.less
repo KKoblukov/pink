@@ -31,8 +31,9 @@
     line-height: 30px;
     color: @darkblue;
 
+
     //свой чекбокс
-    &:before {
+    &::before {
       content: '';
       position: absolute;
       top: -5px;
@@ -44,6 +45,16 @@
       border-radius: 50%;
 
       background-color: #fff;
+
+      transition: .5s;
+      }
+    
+      &:hover::before {
+        border: 2px solid @darkblue;
+      }
+
+      &:active::before {
+        border: 2px solid @accent;
       }
   }
 

@@ -47,8 +47,19 @@
     border-radius: @border-radius;
     appearance: textfield;
 
+    transition: 0.5s;
+
+    &:hover {
+      border: 2px solid @darkblue;
+    }
+
+    &:active {
+      border: 2px solid @accent;
+    }
+
     &:focus {
       .field-focus();
+      border: 2px solid @accent;
     }
 
     &[disabled],

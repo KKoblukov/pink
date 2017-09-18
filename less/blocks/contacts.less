@@ -43,6 +43,19 @@
   font-weight: 300;
   text-decoration: none;
   color: @accent;
+
+  transition: 0.5s;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-skip: ink;
+    color: @darkblue;
+  }
+
+  &:active {
+    text-decoration: none;
+    opacity: 0.3;
+  }
 }
 
 

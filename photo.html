@@ -26,7 +26,7 @@
 
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active"><a href="#">Главная</a></li>
+            <li class="main-nav__item main-nav__item--active"><a href="index.html">Главная</a></li>
             <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
             <li class="main-nav__item"><a href="#">Конкурс</a></li>
             <li class="main-nav__item"><a href="#">HTML Academy</a></li>
@@ -176,7 +176,49 @@
       </ul>
     </section>
     <h2 class="photo-page__title photo-page__title--bottom">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</h2>
-    <section class="photo-page__panorama">
+
+    <section class="editor">
+
+      <div class="editor__photo-wrap">
+        <picture>
+          <source media="(min-width:1200px)" srcset="img/photo-7-desktop@1x.jpg">
+          <source media="(min-width:700px)" srcset="img/photo-7-tablet@1x.jpg">
+          <img src="img/photo-7-mobile@1x.jpg" alt="" class="editor__photo">
+        </picture>
+      </div>
+
+      <div class="editor__inner">
+        <div class="editor__tools">
+
+          <label class="editor__cut-item editor__item editor__item--active">Обрезка.</label>
+          <div class="editor__range field-range editor__range--active">
+            <div class="field-range__input-wrap">
+              <input type="range" min="1" max="100" step="1" value="70" class="field-range__input">
+            </div>
+          </div>
+
+          <label class="editor__color-item editor__item">Заливка.</label>
+          <div class="editor__range field-range">
+            <div class="field-range__input-wrap">
+              <input type="range" min="1" max="100" step="1" value="70" class="field-range__input">
+            </div>
+          </div>
+
+          <label class="editor__bright-item editor__item">Яркость.</label>
+          <div class="editor__range field-range">
+            <div class="field-range__input-wrap">
+              <input type="range" min="1" max="100" step="1" value="70" class="field-range__input">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="editor__buttons-list">
+          <button class="editor__btn btn btn--rose" type="submit">Запостить</button>
+          <button class="editor__btn btn btn--gray" type="reset">Отмена</button>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="page-footer page-footer--inner-page">

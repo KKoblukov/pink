@@ -66,6 +66,17 @@
   background-color: transparent;
   border: none;
   font-size: 0;
+  opacity: 0.3;
+
+  transition: 0.5s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 @media @tablet-widths {
@@ -141,7 +152,7 @@
       content: '';
       position: absolute;
 
-      background-color: rgba(40, 54, 69, 0.3);
+      background-color: @darkblue;
     }
   }
 
